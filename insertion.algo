@@ -1,0 +1,23 @@
+ALGORITHM insertionplaycard
+VAR
+   i,j,n,currentElement:INTEGER
+   card,arr : ARRAY_OF INTEGER[50];
+BEGIN
+    //writing the card  number
+    write ("donner le nombre de cartes")
+    read (n)
+    //filling card array
+    for i = 1 to n do
+        write ("donner la carte")
+        read (card[i])
+    end for
+    //sorting cards in ascending order
+    for i from 1 to n-1
+        currentElement = arr[i]
+        j = i - 1
+        while j >= 0 and arr[j] > currentElement
+            arr[j + 1] = arr[j]
+            j = j - 1
+
+        arr[j + 1] = currentElement
+END.
